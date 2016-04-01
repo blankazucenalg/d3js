@@ -1,0 +1,57 @@
+.row
+  .col-sm-12.col-md-12.text-center.jumbotron
+    h4 Taller enfocado a la visualización de datos con D3.js y su integración con AngularJS mediante directivas.
+.row
+  .col-sm-12.col-md-12
+    h2  Agenda 
+    table.table
+      tr
+        td 9:30 am 
+        td
+        td Introducción y capacitación en D3.js
+      tr
+        td 11:00 am
+        td
+        td Desayuno (molletes o cuernito de atún con papas, café)
+      tr
+        td 11:30 am
+        td
+        td Reto colaborativo (equipos max de 3 personas)
+      tr
+        td 01:30 pm 
+        td 
+        td Publicación de código en Gitlab y presentación de resultados
+.row
+  .col-sm-12.col-md-12
+    h2  Referencias 
+    table.table
+      tr
+        td Repo del Taller
+        td
+        td
+          a(href='https://github.com/data4/d3js') https://github.com/data4/d3js
+      tr
+        td Yeoman Gulp Generator
+        td
+        td
+          a(href='https://github.com/Swiip/generator-gulp-angular') https://github.com/Swiip/generator-gulp-angular 
+      tr
+        td Presentación de Mike 
+        td
+        td
+          a(href='http://bost.ocks.org/mike/d3/workshop/#0') http://bost.ocks.org/mike/d3/workshop/#0 
+.row
+  .col-sm-12.col-md-12
+    h2  Tecnologías usadas 
+    table.table
+      tr(ng-repeat="awesomeThing in main.awesomeThings")
+        td 
+          a(ng-href='{{awesomeThing.url}}')
+            img.pull-left(ng-src='assets/images/{{ awesomeThing.logo }}' alt='{{ awesomeThing.title }}' style="width: 50px")
+        td 
+          h4 {{ awesomeThing.title }}
+        td
+          p {{awesomeThing.description}}
+        td
+          a(ng-href='{{awesomeThing.url}}') {{ awesomeThing.url }}
+            
