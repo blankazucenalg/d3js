@@ -21,8 +21,8 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($scope, $location, moment) {
-      var vm = this;
+    function NavbarController($scope, $location) {
+      // var vm = this;
       $scope.isActive = function (viewLocation) { 
         return viewLocation === $location.path();
       };

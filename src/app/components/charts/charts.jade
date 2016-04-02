@@ -1,0 +1,84 @@
+.row
+  .col-xs-12
+    h2 Graficando datos
+    h3 Trabajando con divs
+    .row
+      .col-xs-12
+        h4 Causas de muerte en la Ciudad de México en 2013
+        .panel.panel-default
+          .panel-heading Data.csv
+          .panel-body
+            pre
+              table
+                tr
+                  td Causas
+                  td Defunciones
+                tr(ng-repeat="d in dataBars")
+                  td {{d.name + " "}}
+                  td {{d.deaths}}
+            .row
+              small.col-xs-6.pull-left Fuente: INEGI. Estadísticas de mortalidad. Distrito Federal, 2013
+              small.col-xs-6.pull.right.text-right
+                a(href="assets/data/CausasDeMortalidadDF2013.csv") CSV 
+                  span.glyphicon.glyphicon-download
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #chart-bar
+          .panel-body
+            #chart-bar
+      
+    hr
+    h3 Features
+    .row
+      .col-xs-12
+        h4 Escalas
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
+    .row
+      .col-xs-12
+        h4 Eventos
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #events
+          .panel-body
+            #events
+    hr
+    h3 D3 + SVG
+    .row
+      .col-xs-12
+        h4 Marcas de autos más vendidos en febrero de 2016
+        .panel.panel-default
+          .panel-heading Data.csv
+          .panel-body
+            pre
+              table
+                tr
+                  td Grupo automotriz 
+                  td Cantidad
+                tr(ng-repeat="d in dataSvg")
+                  td {{d.name + " "}}
+                  td {{d.quantity}}
+            .row
+              small.col-xs-6.pull-left Fuente: Asociación Mexicana de la Industria Automotriz
+              small.col-xs-6.pull.right.text-right
+                a(href="assets/data/AutosVendidosFeb2016.csv") CSV 
+                  span.glyphicon.glyphicon-download
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[3]")
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #chart-svg
+          .panel-body
+            #chart-svg
+      
+    hr
+    h4 Más ejemplos en 
+      a(href="https://github.com/mbostock/d3/wiki/Gallery") https://github.com/mbostock/d3/wiki/Gallery
+    hr

@@ -10,12 +10,10 @@ nav.navbar.navbar-static-top.navbar-default
           a(ui-sref='home') Inicio
         li(ng-class="{ active: isActive('/introduction')}")
           a(ui-sref='introduction') Introducción
-        li(ng-class="{ active: isActive('/selections')}")
-          a(ui-sref='selections') Selecciones y propiedades
         li(ng-class="{ active: isActive('/charts')}")
           a(ui-sref='charts') Graficando datos
         li(ng-class="{ active: isActive('/angular')}")
           a(ui-sref='angular') Integrando con Angular.js
       ul.nav.navbar-nav.navbar-right.acme-navbar-text
         li(ng-class="{ active: isActive('/challenge')}")
-          a(ui-sref='challenge') CHALLENGE ACCEPTED!
+          a(ui-sref='challenge'): button.btn.btn-success CHALLENGE ACCEPTED!

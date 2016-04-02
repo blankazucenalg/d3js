@@ -20,12 +20,6 @@
         controller: 'introductionController',
         controllerAs: 'introduction'
       })
-      .state('selections', {
-        url: '/selections',
-        templateUrl: 'app/components/selections/selections.html',
-        controller: 'selectionsController',
-        controllerAs: 'selections'
-      })
       .state('charts', {
         url: '/charts',
         templateUrl: 'app/components/charts/charts.html',

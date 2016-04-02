@@ -1,3 +1,95 @@
 .row
   .col-xs-12
-    p This is a test
+    h2 Introducción
+    h3 Selecciones y propiedades
+    .row
+      .col-xs-12
+        h4 Seleccionando un elemento del DOM y cambiando propiedades
+        p D3 soporta selecciones por etiqueta <code>("div")</code>, clase <code>(".class")</code>, identificador <code>("#id")</code>, atributo <code>("[color=red]")</code>, anidación <code>("parent child")</code> así como soporta operaciones <b>AND</b> y <b>OR</b> <code>('.class1.class2') ('.class1, .class2')</code> respectivamente.
+      .col-xs-6
+        .panel.panel-default
+          .panel-heading
+            code #Example1 : before
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+      .col-xs-6
+        #example1.panel.panel-default
+          .panel-heading
+            code #Example1 : after
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+    hr
+    .row
+      .col-xs-12
+        h4 Estableciendo propiedades dinámicas sobre un elemento del DOM
+      .col-xs-6
+        .panel.panel-default
+          .panel-heading
+            code #Example2 : before
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+      .col-xs-6
+        #example2.panel.panel-default
+          .panel-heading
+            code #Example2 : after
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
+    hr
+    h3 Datos, el <span class="glyphicon glyphicon-heart"></span> de d3.js
+    .row
+      .col-xs-12
+        h4 Enlazando datos con los elementos
+      .col-xs-6
+        #example3.panel.panel-default
+          .panel-heading
+            code #Example3
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+      .col-xs-6
+        #example4.panel.panel-default
+          .panel-heading
+            code #Example4
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
+    hr
+    .row
+      .col-xs-12
+        h4 Actualizando los datos
+      .col-xs-6
+        .panel.panel-default
+          .panel-heading
+            code #Example5 : before
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+            p Párrafo A
+            p Párrafo B
+            p Párrafo C
+            p Párrafo D
+      .col-xs-6
+        #example5.panel.panel-default
+          .panel-heading
+            code #Example5 : after
+          .panel-body
+            p Párrafo 1 
+            p Párrafo 2
+            p Párrafo A
+            p Párrafo B
+            p Párrafo C
+            p Párrafo D
+      .col-xs-12
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[3]")
+    .row
+      hr

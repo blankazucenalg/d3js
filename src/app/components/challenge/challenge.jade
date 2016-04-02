@@ -1,0 +1,40 @@
+.row
+  .col-xs-12
+    .jumbotron
+      h2 Reto del taller de d3.js
+      p Realizar una gráfica que represente la cantidad de autos registrados en la Ciudad de México en un proyecto de Angular usando el generador de Yeoman
+    
+    h3 Datos
+    .row
+      .col-xs-12
+        h4 Cantidad de autos registrados en la ciudad de México en el transcurso del tiempo
+        .panel.panel-default
+          .panel-heading Data.csv
+          .panel-body
+            pre
+              table
+                tr
+                  td Año 
+                  td Cantidad
+                tr(ng-repeat="d in data")
+                  td {{d.year + " "}}
+                  td {{d.quantity}}
+            .row
+              small.col-xs-6.pull-left Fuente: INEGI. 
+              small.col-xs-6.pull.right.text-right
+                a(href="assets/data/AutosRegistradosDF.csv") CSV 
+                  span.glyphicon.glyphicon-download
+    .row
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            h3 Herramientas y tecnologías requeridas
+          .panel-body
+            pre
+              b npm bower gulp yeoman 
+              b: a(href='https://github.com/Swiip/generator-gulp-angular') generator-gulp-angular 
+            h4 Guía de instalación
+            ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+
+
+      
