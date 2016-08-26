@@ -16,7 +16,7 @@
       tabSize: 2,
       onLoad: function(editor){
         // Editor part
-        var doc = _editor.getDoc();
+        var doc = editor.getDoc();
         editor.focus();
 
         // Options

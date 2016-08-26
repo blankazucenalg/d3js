@@ -6,7 +6,7 @@
     .controller('introductionController', introductionController);
 
   /** @ngInject */
-  function introductionController($scope, $timeout) {
+  function introductionController($scope, $timeout, $log) {
     $scope.editorOptions = {
       lineWrapping : true,
       lineNumbers: true,
@@ -14,7 +14,7 @@
       tabSize: 2,
       onLoad: function(editor){
         // Editor part
-        var doc = _editor.getDoc();
+        var doc = editor.getDoc();
         editor.focus();
 
         // Options
@@ -39,8 +39,33 @@
     "var data = ['Parrafo A', 'Párrafo C', 'Párrafo D', 'Párrafo E', 'Párrafo F']; \nvar selection = d3.select('#example5 .panel-body').selectAll('p').data(data, function(d){return d;}) \nselection.enter().append('p').text(function(d){return d;}); \nselection.exit().remove();"
     ];
 
-    for(var i=0; i < $scope.codes.length; i++)
-      eval($scope.codes[i]); 
+    $('#code0').keydown(function(e){
+      if ((e.ctrlKey || e.metaKey) && (e.keyCode === 13 || e.keyCode === 10)) {
+        // ctrl + enter
+        eval($scope.codes[0]);
+      }
+    });
+    $('#code1').keydown(function(e){
+      if ((e.ctrlKey || e.metaKey) && (e.keyCode === 13 || e.keyCode === 10)) {
+        // ctrl + enter
+        eval($scope.codes[1]);
+      }
+    });
+    $('#code2').keydown(function(e){
+      if ((e.ctrlKey || e.metaKey) && (e.keyCode === 13 || e.keyCode === 10)) {
+        //ctrl + enter
+        eval($scope.codes[2]);
+      }
+    });
+    $('#code3').keydown(function(e){
+      if ((e.ctrlKey || e.metaKey) && (e.keyCode === 13 || e.keyCode === 10)) {
+        //ctrl + enter
+        eval($scope.codes[3]);
+      }
+    });
+
+    //for(var i=0; i < $scope.codes.length; i++)
+    //  eval($scope.codes[i]); 
 
   }
   
