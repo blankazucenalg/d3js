@@ -32,11 +32,11 @@
     $scope.codes = [
     "// d3.select(selection).attr(name [,value]); \nd3.selectAll('#example1 p').style('color','orange');",
 
-    "var p = d3.selectAll('#example2 p')[0]; \nfor(var i in p) \n  d3.select(p[i]).style('font-size', (Math.random() * 40) + 'px');",
+    "//Iteracion manual\nvar p = d3.selectAll('#example2 p')[0]; //Grupo de parrafos\nfor(var i in p) \n  d3.select(p[i]).style('font-size', (Math.random() * 40) + 'px');\n\n//Iteracion con d3\nd3.selectAll('#example2 p')\n  .each(function(d){\n    d3.select(this).style('font-size', (Math.random() * 40) + 'px');\n  });",
 
-    "var data = ['Parrafo A', 'Párrafo B', 'Párrafo C', 'Párrafo D']; \nd3.select('#example3 .panel-body').selectAll('p').data(data).enter().append('p').text(function(d){return d;}); \nd3.select('#example4 .panel-body').selectAll('p').data(data, function(d){return d;}).enter().append('p').text(function(d){return d;});",
+    "var data = ['Parrafo A', 'Párrafo B', 'Párrafo C', 'Párrafo D']; \n\nd3.select('#example3 .panel-body')\n  .selectAll('p')\n  .data(data)\n  .enter()\n  .append('p')\n  .text(function(d){ return d; });\n\nd3.select('#example4 .panel-body')\n  .selectAll('p')\n  .data(data, function(d){return d;})\n  .enter()\n  .append('p')\n  .text(function(d){ return d; });",
 
-    "var data = ['Parrafo A', 'Párrafo C', 'Párrafo D', 'Párrafo E', 'Párrafo F']; \nvar selection = d3.select('#example5 .panel-body').selectAll('p').data(data, function(d){return d;}) \nselection.enter().append('p').text(function(d){return d;}); \nselection.exit().remove();"
+    "var data = ['Parrafo A', 'Párrafo C', 'Párrafo D', 'Párrafo E', 'Párrafo F']; \n\nvar selection = d3.select('#example5 .panel-body')\n  .selectAll('p')\n  .data(data, function(d){ return d; });\n\nselection\n  .enter()\n  .append('p')\n  .text(function(d){return d;}); \n\nselection\n  .exit()\n  .remove();"
     ];
 
     $('#code0').keydown(function(e){

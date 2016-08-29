@@ -9,8 +9,10 @@ nav.navbar.navbar-static-top.navbar-default
       ul.nav.navbar-nav
         li(ng-class="{ active: isActive('/')}")
           a(ui-sref='home') Inicio
+        li(ng-class="{ active: isActive('/start')}")
+          a(ui-sref='start') Introducción
         li(ng-class="{ active: isActive('/introduction')}")
-          a(ui-sref='introduction') Introducción
+          a(ui-sref='introduction') Conociendo D3.js
         li(ng-class="{ active: isActive('/charts')}")
           a(ui-sref='charts') Graficando datos
         //li(ng-class="{ active: isActive('/angular')}")

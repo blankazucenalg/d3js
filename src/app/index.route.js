@@ -14,6 +14,12 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .state('start', {
+        url: '/start',
+        templateUrl: 'app/start/start.html',
+        controller: 'StartController',
+        controllerAs: 'start'
+      })
       .state('introduction', {
         url: '/introduction',
         templateUrl: 'app/components/introduction/introduction.html',
