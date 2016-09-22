@@ -10,7 +10,8 @@
     $scope.editorOptions = {
       lineWrapping : true,
       lineNumbers: true,
-      mode: 'javascript',
+      mode: "javascript",
+      theme:  "default",
       tabSize: 2,
       onLoad: function(editor){
         // Editor part
@@ -18,7 +19,7 @@
         editor.focus();
 
         // Options
-        doc.markClean()
+        doc.markClean();
 
         // Events
         editor.on("beforeChange", function(){ });
