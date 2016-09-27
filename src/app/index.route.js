@@ -8,12 +8,12 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      /*.state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
-      })
+      })*/
       .state('start', {
         url: '/start',
         templateUrl: 'app/start/start.html',
@@ -45,7 +45,7 @@
         controllerAs: 'challenge'
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/start');
   }
 
 })();

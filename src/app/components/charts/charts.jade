@@ -1,6 +1,45 @@
 .row
   .col-xs-12
     h2 Graficando datos
+    h3 Cuando los elementos y datos toman sentido
+    .row
+      .col-xs-12
+        h4 Ejemplo 1
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #ejemplo1
+          #ejemplo1.panel-body
+      .col-xs-12
+        ui-codemirror#code4(ui-codemirror-opts="editorOptions" ng-model="codes[4]")
+    .row
+      .col-xs-12
+        h4 Ejercicio 1
+        ul
+          li Retomando el ejercicio de la sección anterior. A cada circulo ponle como valor de su propiedad width y height, el valor del dato. Recuerda que las propiedades se modifican usando el método 
+            code .attr(name, value);
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #ejercicio2
+          #ejercicio2.panel-body
+      .col-xs-12
+        ui-codemirror#exercise0(ui-codemirror-opts="editorOptions" ng-model="exercises[0]")
+    h3 ¿Y si tengo los datos en un CSV / TSV / JSON?
+    p D3.js permite importar archivos de datos directamente usando los métodos 
+    .panel.panel-default
+      .panel-heading Métodos
+      .panel-body
+        pre
+          | d3.csv(url, callback);
+          | d3.tsv(url, callback);
+          | d3.json(url, callback);
+          | d3.dsv(url, callback);
+        p El callback siempre recibe el arreglo de datos finales y si existió algun error
+        pre function(data, error){
+          |   // Qué hago con los datos?
+          | }
+
     h3 Trabajando con divs
     .row
       .col-xs-12

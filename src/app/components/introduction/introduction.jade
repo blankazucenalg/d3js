@@ -1,99 +1,217 @@
 .row
   .col-xs-12
     h1 Introducción
-    p La comunicación es un reto de condensar información
-    h2 Introducción a D3.js
-    h3 Selecciones y propiedades
-    a(href="https://bost.ocks.org/mike/selection" target="_blank") https://bost.ocks.org/mike/selection
-    .row
-      .col-xs-12
-        h4 Seleccionando un elemento del DOM y cambiando propiedades
-        p D3 soporta selecciones por etiqueta <code>("div")</code>, clase <code>(".class")</code>, identificador <code>("#id")</code>, atributo <code>("[color=red]")</code>, anidación <code>("parent child")</code> así como soporta operaciones <b>AND</b> y <b>OR</b> <code>('.class1.class2') ('.class1, .class2')</code> respectivamente.
-      //.col-xs-6
-        .panel.panel-default
-          .panel-heading
-            code #Example1 : before
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-      .col-xs-12
-        #example1.panel.panel-default
-          .panel-heading
-            code #Example1
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-      .col-xs-12
-        ui-codemirror#code0(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+    h2 Selectores
+    p D3 soporta selecciones por etiqueta <code>("div")</code>, clase <code>(".class")</code>, identificador <code>("#id")</code>, atributo <code>("[color=red]")</code>, anidación <code>("parent child")</code> así como soporta operaciones <b>AND</b> y <b>OR</b> <code>('.class1.class2') ('.class1, .class2')</code> respectivamente.
+    p
+      a(href="https://librosweb.es/libro/css/capitulo_2/selectores_basicos.html") https://librosweb.es/libro/css/capitulo_2/selectores_basicos.html
+    .col-xs-6
+      .panel.panel-default
+        .panel-heading
+          code Selectores ejemplo
+        .panel-body
+          pre &lt;body&gt;
+            |  &lt;div id="primero"&gt;
+            |    &lt;p&gt; Lorem ipsum dolor sit amet, &lt;a href="#"&gt; consectetuer adipiscing elit&lt;/a&gt;. Praesent blandit nibh at felis. 
+            |    Sed nec diam in dolor vestibulum aliquet. Duis ullamcorper, nisi non facilisis molestie, &lt;em&gt; lorem sem aliquam nulla 
+            |    &lt;/em&gt;, id lacinia velit mi vestibulum enim.&lt;/p&gt;
+            |  &lt;/div&gt;
+            |   
+            |  &lt;div class="normal"&gt;
+            |    &lt;p&gt; Phasellus eu velit sed lorem sodales egestas. Ut feugiat. &lt;span&gt; &lt;a href="#"&gt; Donec porttitor&lt;/a&gt;, 
+            |    magna eu varius luctus,&lt;/span&gt; metus massa tristique massa, in imperdiet est velit vel magna. Phasellus erat. Duis risus. 
+            |    &lt;a href="#"&gt; Maecenas dictum&lt;/a&gt;, nibh vitae pellentesque auctor, tellus velit consectetuer tellus, tempor pretium 
+            |    felis tellus at metus.&lt;/p&gt;
+            |  &lt;div&gt;
+            |   
+            |  &lt;div class="normal"&gt;
+            |    &lt;p&gt; Nam lacus orci, condimentum ut blandit vehicula, ullamcorper vitae metus. Nunc aliquet turpis non tellus aliquam, 
+            |    sollicitudin commodo lacus ullamcorper. Quisque eget nisl elit. Cras.&lt;/p&gt;
+            |    &lt;input type="text"/&gt;
+            |  &lt;div&gt;
+            |&lt;/body&gt;
+    .col-xs-6
+      .panel.panel-default
+        .panel-heading
+          code Selectores
+        .panel-body
+          p Selector de etiqueta: 
+          p
+            code p
+            | 
+            code div
+            | 
+            code h1 
+          p Selector de clase: 
+          p
+            code .destacado
+            | 
+            code .activo
+          p Selector de identificador: 
+          p
+            code #unico
+            | 
+            code #principal
+          p Selector descendiente: 
+          p
+            code p span
+            | 
+            code .normal p
+            | 
+            code div ul li 
+          p Selector multiple (OR): 
+          p
+            code h1, h2, h3
+            | 
+            code .normal, .principal
+            | 
+            code #unico, #principal
+          p Selector AND: 
+          p
+            code h1.titulo
+            | 
+            code .normal.principal
+            | 
+            code #unico.normal
+          p Selector de atributo: 
+          p
+            code [color=red]
+            | 
+            code input[type="text"]
+
+          p Selector del hijo en la n-ésima posición
+          p
+            code p:nth-child(2) 
+            | Devuelve el segundo párrafo que encuentra
+          p 
+            code div:nth-child(3)
+            | Devuelve el tercer div que encuentra
+
+
+  h1 Introducción a D3.js
+  h3 Selecciones y propiedades
+  a(href="https://bost.ocks.org/mike/selection" target="_blank") https://bost.ocks.org/mike/selection
+  .row
+    .col-xs-12
+      ui-codemirror#code0(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+  .row
+    .col-xs-12
+      h4 Seleccionando un elemento del DOM y cambiando propiedades (.attr(), .style())
+    .col-xs-12
+      #example1.panel.panel-default
+        .panel-heading
+          code #Example1
+        .panel-body
+          p Párrafo 1 
+          p Párrafo 2
+    .col-xs-12
+      ui-codemirror#code1(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
+  hr
+  .row
+    .col-xs-12
+      h4 Estableciendo propiedades dinámicas sobre un elemento del DOM
+    .col-xs-12
+      #example2.panel.panel-default
+        .panel-heading
+          code #Example2
+        .panel-body
+          p Párrafo 1 
+          p Párrafo 2
+    .col-xs-12
+      ui-codemirror#code2(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
+
+    .col-xs-12
+      h4 Ejercicio 1
+      ul
+        li Selecciona los div y cambia su color de fondo (background)
+        li Selecciona el primer div y cambia el color de fuente (color)
+        li Selecciona el segundo div y aplicale la clase "circle"
+      .panel.panel-default
+        .panel-heading
+          code #ejercicio1
+        #ejercicio1.panel-body
+          div.square Div 1
+          div.square Div 2
+    .col-xs-12
+      ui-codemirror#exercise1(ui-codemirror-opts="editorOptions" ng-model="exercises[0]")
+  hr
+  h3 Datos, el <span class="glyphicon glyphicon-heart"></span> de d3.js
+  .row
+    .col-xs-12
+      h4 Enlazando datos con los elementos (.data())
+      a(href="https://bost.ocks.org/mike/selection/#key" target="_blank") https://bost.ocks.org/mike/selection/#key
+      .row
+        .col-xs-12
+          img(src="assets/images/binding-data.png")
+    .col-xs-12
+      #example3.panel.panel-default
+        .panel-heading
+          code #Example3
+        .panel-body
+          p Párrafo 1 
+          p Párrafo 2
+    //.col-xs-6
+      #example4.panel.panel-default
+        .panel-heading
+          code #Example4
+        .panel-body
+          p Párrafo 1 
+          p Párrafo 2
+    .col-xs-12
+      ui-codemirror#code3(ui-codemirror-opts="editorOptions" ng-model="codes[3]")
+
+    .col-xs-12
+      h4 Update, enter, exit
+      a(href="https://bost.ocks.org/mike/selection/#enter-update-exit" target="_blank") https://bost.ocks.org/mike/selection/#enter-update-exit
+      p Cuando se hace el enlace con los datos, existen 3 posibles subselecciones.
+      dl
+        dt Update
+        dd Resultado de los elementos del DOM que hagan match con los datos
+        dt Enter
+        dd Resultado de los datos que no tienen un elemento en el DOM
+        dt Exit
+        dd Resultado de los elementos del DOM que no tienen un dato asignado
+  hr
+  .row
+    .col-xs-12
+      h4 Actualizando los datos
+    //.col-xs-6
+      .panel.panel-default
+        .panel-heading
+          code #Example5 : before
+        .panel-body
+          p Párrafo 1 
+          p Párrafo 2
+          p Párrafo A
+          p Párrafo B
+          p Párrafo C
+          p Párrafo D
+    .col-xs-12
+      #example4.panel.panel-default
+        .panel-heading
+          code #Example5
+        .panel-body
+          p Párrafo 1 
+          p Párrafo 2
+          p Párrafo A
+          p Párrafo B
+          p Párrafo C
+          p Párrafo D
+    .col-xs-12
+      ui-codemirror#code4(ui-codemirror-opts="editorOptions" ng-model="codes[4]")
+  hr
+  .row
+    .col-xs-12
+      h4 Ejercicio 2
+      ul
+        li Crea un div por cada elemento del arreglo dado usando la subseleccion .enter()
+        li Aplica a los divs la clase "square" o "circle" para que sean visibles
+    .col-xs-12
+      .panel.panel-default
+        .panel-heading
+          code #ejercicio2
+        #ejercicio2.panel-body
+    .col-xs-12
+      ui-codemirror#exercise2(ui-codemirror-opts="editorOptions" ng-model="exercises[1]")
+  .row
     hr
-    .row
-      .col-xs-12
-        h4 Estableciendo propiedades dinámicas sobre un elemento del DOM
-      //.col-xs-6
-        .panel.panel-default
-          .panel-heading
-            code #Example2 : before
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-      .col-xs-12
-        #example2.panel.panel-default
-          .panel-heading
-            code #Example2
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-      .col-xs-12
-        ui-codemirror#code1(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
-    hr
-    h3 Datos, el <span class="glyphicon glyphicon-heart"></span> de d3.js
-    .row
-      .col-xs-12
-        h4 Enlazando datos con los elementos
-        a(href="https://bost.ocks.org/mike/selection/#key" target="_blank") https://bost.ocks.org/mike/selection/#key
-      .col-xs-6
-        #example3.panel.panel-default
-          .panel-heading
-            code #Example3
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-      .col-xs-6
-        #example4.panel.panel-default
-          .panel-heading
-            code #Example4
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-      .col-xs-12
-        ui-codemirror#code2(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
-    hr
-    .row
-      .col-xs-12
-        h4 Actualizando los datos
-      //.col-xs-6
-        .panel.panel-default
-          .panel-heading
-            code #Example5 : before
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-            p Párrafo A
-            p Párrafo B
-            p Párrafo C
-            p Párrafo D
-      .col-xs-12
-        #example5.panel.panel-default
-          .panel-heading
-            code #Example5
-          .panel-body
-            p Párrafo 1 
-            p Párrafo 2
-            p Párrafo A
-            p Párrafo B
-            p Párrafo C
-            p Párrafo D
-      .col-xs-12
-        ui-codemirror#code3(ui-codemirror-opts="editorOptions" ng-model="codes[3]")
-    .row
-      hr
