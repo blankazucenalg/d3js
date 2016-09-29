@@ -38,6 +38,12 @@
         controller: 'angularController',
         controllerAs: 'angular'
       })
+      .state('dbox', {
+        url: '/dbox',
+        templateUrl: 'app/components/dbox/dbox.html',
+        controller: 'DboxController',
+        controllerAs: 'dbox'
+      })
       .state('challenge', {
         url: '/challenge',
         templateUrl: 'app/components/challenge/challenge.html',

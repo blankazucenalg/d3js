@@ -84,8 +84,36 @@
             code #scales
           .panel-body
             #scales
-
     .row
+      .col-xs-12
+        h4 Eventos
+        p
+          a(href="https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events") https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events
+      .col-xs-12
+        ui-codemirror#code2(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #events
+          .panel-body
+            #events
+    hr
+    h3 D3 + SVG
+    p
+      a(href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element") https://developer.mozilla.org/en-US/docs/Web/SVG/Element
+    hr
+    h3 Ejercicio 2 / Ejemplo 2
+    ul 
+      li Establece la escala a usar para las distancias de los planetas al Sol.
+      li Genera una lista (arreglo) con los nombres de los planetas.
+      li Establece la escala 
+        strong ordinal 
+        | a usar para cada uno de los planetas.
+      li Genera circulos de SVG para cada uno de los planetas incluidos en los datos
+      li Haz que la distancia (propiedad cx) sea proporcional según la escala
+      li Genera otra escala que tome en cuenta el alto <code>height</code> del contenedor y los valores mínimo y máximo del diámetro de los planetas.
+      li Establece el tamaño de los planetas según su diámetro usando esa escala.
+    .row#charts
       .col-xs-12
         h4 Distancia de los planetas al sol
         .panel.panel-default
@@ -113,21 +141,8 @@
           .panel-body#ejercicio2
       .col-xs-12
         ui-codemirror#exercise1(ui-codemirror-opts="editorOptions" ng-model="exercises[1]")
-    .row
-      .col-xs-12
-        h4 Eventos
-      .col-xs-12
-        ui-codemirror#code2(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
-      .col-xs-12
-        .panel.panel-default
-          .panel-heading
-            code #events
-          .panel-body
-            #events
     hr
-    h3 D3 + SVG
-    p
-      a(href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element") https://developer.mozilla.org/en-US/docs/Web/SVG/Element
+    h3 Gráficas reutilizables como una función
     .row
       .col-xs-12
         h4 Marcas de autos más vendidos en febrero de 2016
