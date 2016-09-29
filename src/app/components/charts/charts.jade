@@ -21,8 +21,8 @@
       .col-xs-12
         .panel.panel-default
           .panel-heading
-            code #ejercicio2
-          #ejercicio2.panel-body
+            code #ejercicio1
+          #ejercicio1.panel-body
       .col-xs-12
         ui-codemirror#exercise0(ui-codemirror-opts="editorOptions" ng-model="exercises[0]")
     h3 ¿Y si tengo los datos en un CSV / TSV / JSON?
@@ -84,6 +84,35 @@
             code #scales
           .panel-body
             #scales
+
+    .row
+      .col-xs-12
+        h4 Distancia de los planetas al sol
+        .panel.panel-default
+          .panel-heading Data.csv
+          .panel-body
+            pre
+              table
+                tr
+                  td Planeta
+                  td Distancia media al Sol (Km)
+                  td Diámetro (Km)
+                tr(ng-repeat="d in planets")
+                  td {{d.planet + " "}}
+                  td {{d.distance}}
+                  td {{d.diameter}}
+            .row
+              small.col-xs-6.pull-left Fuente: Wikipedia, 2016
+              small.col-xs-6.pull.right.text-right
+                a(href="assets/data/planetas.csv") CSV 
+                  span.glyphicon.glyphicon-download
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #ejercicio2
+          .panel-body#ejercicio2
+      .col-xs-12
+        ui-codemirror#exercise1(ui-codemirror-opts="editorOptions" ng-model="exercises[1]")
     .row
       .col-xs-12
         h4 Eventos
@@ -97,6 +126,8 @@
             #events
     hr
     h3 D3 + SVG
+    p
+      a(href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element") https://developer.mozilla.org/en-US/docs/Web/SVG/Element
     .row
       .col-xs-12
         h4 Marcas de autos más vendidos en febrero de 2016

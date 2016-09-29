@@ -46,6 +46,22 @@
       vm.dataBars = data;
     });
 
+    d3.csv('assets/data/planetas.csv', function(d){
+      return {
+        planet: d.planeta,
+        distance: +d.kmDistanciaAlSol,
+        diameter: +d.diametroKm
+      };
+    }, function(data){
+      $timeout(function(){
+        $scope.$apply(function(){
+          $scope.planets = data;
+        });
+      });
+      $scope.planets = data;
+      vm.planets = data;
+    });
+
     function drawBars(){
       d3.csv('assets/data/CausasDeMortalidadDF2013.csv', function(d){
         return {
@@ -146,7 +162,8 @@
     ];
 
     $scope.exercises = [
-    "var datos = [30,40,50,80,100]; \nd3.select('#ejercicio2').selectAll('div')\n  .data(datos) // Se hace el enlace con los datos\n  .enter()// Regresa todos los datos 'nuevos' \n  .append('div')//Agregar un nuevo div para cada dato\n  .attr('class', 'circle')\n  // A cada circulo dale un width y un height acorde con el valor del dato"
+    "var datos = [30,40,50,80,100]; \nd3.select('#ejercicio2').selectAll('div')\n  .data(datos) // Se hace el enlace con los datos\n  .enter()// Regresa todos los datos 'nuevos' \n  .append('div')//Agregar un nuevo div para cada dato\n  .attr('class', 'circle')\n  // A cada circulo dale un width y un height acorde con el valor del dato",
+    "d3.selectAll('#ejercicio2 *').remove();\nd3.csv('assets/data/planetas.csv', function(d){\n  return {\n    planet: d.planeta,\n    distance: +d.kmDistanciaAlSol,\n    diameter: +d.diametroKm\n    };\n  }, function(data){\n    // Dibuja circulos para cada planeta\n    // Las distancias no deben exceder del tamaño del contenedor. Usa una escala lineal \n\n    var escala = d3.scale.linear()\n      .range( [ 10, 690])\n      .domain([ 0, 5913520000]);\n\n    d3.select('#ejercicio2')\n      .selectAll('div')\n      .data(data)\n      .enter()\n      .append('div')\n      .attr('class','circle')\n      .style('width', function(d){ return d.diameter / 1000 + 'px'; })\n      .style('height', function(d){ return d.diameter / 1000 + 'px'; })\n      .style('position','absolute')\n      .style('left', function(d){ return escala(d.distance) + 'px';})\n      .style('top', function(d){ return 100 - (d.diameter / 2000) + 'px';});\n  });"
     ];
 
     $('#code0').keydown(function(e){
@@ -183,6 +200,12 @@
       if ((e.ctrlKey || e.metaKey) && (e.keyCode === 13 || e.keyCode === 10)) {
         //ctrl + enter
         eval($scope.exercises[0]);
+      }
+    });
+    $('#exercise1').keydown(function(e){
+      if ((e.ctrlKey || e.metaKey) && (e.keyCode === 13 || e.keyCode === 10)) {
+        //ctrl + enter
+        eval($scope.exercises[1]);
       }
     });
     
