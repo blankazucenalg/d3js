@@ -7,7 +7,7 @@ svg{
 .axis path,
 .axis line {
   fill: none;
-  stroke: #666;
+  stroke: #000;
   shape-rendering: crispEdges;
 }
 
@@ -108,7 +108,7 @@ svg{
   color: #4b4b4b;
 }
 
-.dbox-gray .cotainer-average-lines {
+.dbox-gray .average-lines {
   min-height: 40px;
   margin: -2px 0 0 0;
   background-color: white;
@@ -118,7 +118,7 @@ svg{
   color: #4b4b4b;
 }
 
-.dbox-gray .cotainer-average-lines .legend-average-lines {
+.dbox-gray .average-lines .legend {
   min-height: 20px;
   width: 90%;
   margin: 0px auto 10px auto;
