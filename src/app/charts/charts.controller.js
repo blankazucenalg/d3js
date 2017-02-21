@@ -3,10 +3,10 @@
 
   angular
     .module('d3Js')
-    .controller('chartsController', chartsController);
+    .controller('ChartsController', chartsController);
 
   /** @ngInject */
-  function chartsController($scope, $timeout) {
+  function chartsController($scope, $timeout, d3) {
     var vm = this;
 
     $scope.editorOptions = {
@@ -25,7 +25,7 @@
         // Events
         editor.on("beforeChange", function(){ });
         editor.on("change", function(){ });
-        editor.on("keyHandled", function(){ 
+        editor.on("keyHandled", function(){
           console.log("Pressed");
         });
       }
@@ -208,11 +208,11 @@
         eval($scope.exercises[1]);
       }
     });
-    
+
 
 
     // for(var i=0; i < $scope.codes.length; i++)
-    //   eval($scope.codes[i]); 
+    //   eval($scope.codes[i]);
   }
-  
+
 })();

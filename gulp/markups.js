@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var pug = require('gulp-pug');
 
 var browserSync = require('browser-sync');
 
@@ -13,8 +14,8 @@ gulp.task('markups', function() {
     path.extname = '.html';
   }
 
-  return gulp.src(path.join(conf.paths.src, '/app/**/*.jade'))
-    .pipe($.consolidate('jade', { basedir: conf.paths.src, doctype: 'html', pretty: '  ' })).on('error', conf.errorHandler('Jade'))
+  return gulp.src(path.join(conf.paths.src, '/app/**/*.pug'))
+    .pipe(pug({doctype: 'html',pretty: '  '})).on('error', conf.errorHandler('Pug'))
     .pipe($.rename(renameToHtml))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')))
     .pipe(browserSync.stream());

@@ -6,6 +6,6 @@
     .controller("StartController", StartController);
 
   function StartController(){
-    var vm = this;
+    //var vm = this;
   }
 })();

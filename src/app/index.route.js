@@ -18,31 +18,31 @@
         url: '/start',
         templateUrl: 'app/start/start.html',
         controller: 'StartController',
-        controllerAs: 'start'
+        controllerAs: 'vm'
       })
       .state('introduction', {
         url: '/introduction',
-        templateUrl: 'app/components/introduction/introduction.html',
-        controller: 'introductionController',
-        controllerAs: 'introduction'
+        templateUrl: 'app/introduction/introduction.html',
+        controller: 'IntroductionController',
+        controllerAs: 'vm'
       })
       .state('charts', {
         url: '/charts',
-        templateUrl: 'app/components/charts/charts.html',
-        controller: 'chartsController',
-        controllerAs: 'charts'
+        templateUrl: 'app/charts/charts.html',
+        controller: 'ChartsController',
+        controllerAs: 'vm'
       })
       .state('angular', {
         url: '/angular',
-        templateUrl: 'app/components/angular/angular.html',
-        controller: 'angularController',
-        controllerAs: 'angular'
+        templateUrl: 'app/using-angular/angular.html',
+        controller: 'AngularController',
+        controllerAs: 'vm'
       })
       .state('challenge', {
         url: '/challenge',
-        templateUrl: 'app/components/challenge/challenge.html',
-        controller: 'challengeController',
-        controllerAs: 'challenge'
+        templateUrl: 'app/challenge/challenge.html',
+        controller: 'ChallengeController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/start');
