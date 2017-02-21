@@ -1,0 +1,54 @@
+.row
+  .col-xs-12
+    .jumbotron
+      h2 Reto planteado
+      p Realizar una gráfica que represente la cantidad de autos registrados en la Ciudad de México en una linea de tiempo usando círculos. 
+
+    h3 Para usar D3.js requieres importar la biblioteca usando el sig. script
+    ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
+    
+    h3 Datos
+    .row
+      .col-xs-12
+        h4 Cantidad de autos registrados en la ciudad de México en el transcurso del tiempo
+        .panel.panel-default
+          .panel-heading Data.csv
+          .panel-body
+            pre
+              table
+                tr
+                  td Año 
+                  td Cantidad
+                tr(ng-repeat="d in data")
+                  td {{d.year + " "}}
+                  td {{d.quantity}}
+            .row
+              small.col-xs-6.pull-left Fuente: INEGI. 
+              small.col-xs-6.pull.right.text-right
+                a(href="assets/data/AutosRegistradosDF.csv") CSV 
+                  span.glyphicon.glyphicon-download
+    .row
+      .col-xs-12
+        p Enviar el reto realizado a alecs.garza@data4.mx ya sea en una carpeta comprimida, o en un repositorio de GIT.
+        h3 Contacto 
+        p Blanca Lopez
+        p Cel: 55 1845 4332
+        p E-mail: blanca.lopez@data4.mx
+        p Alecs Garza
+        p Cel: 81 8012 8947
+        p Email: alecs.garza@data4.mx
+
+    //.row
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            h3 Herramientas y tecnologías requeridas
+          .panel-body
+            pre
+              b npm bower gulp yeoman 
+              b: a(href='https://github.com/Swiip/generator-gulp-angular') generator-gulp-angular 
+            h4 Guía de instalación
+            ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+
+
+      
