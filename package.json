@@ -59,7 +59,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blankazucenalg/d3js"
+    "url": "git@github.com:blankazucenalg/d3js.git"
   },
   "author": "Blanca Azucena López <blankazucenalg@gmail.com>",
   "license": "MIT"
