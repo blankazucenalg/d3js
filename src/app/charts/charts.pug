@@ -16,7 +16,7 @@
       .col-xs-12
         h4 Ejercicio 1
         ul
-          li Retomando el ejercicio de la sección anterior. A cada circulo ponle como valor de su propiedad width y height, el valor del dato. Recuerda que las propiedades se modifican usando el método 
+          li Retomando el ejercicio de la sección anterior. A cada circulo ponle como valor de su propiedad width y height, el valor del dato. Recuerda que las propiedades se modifican usando el método
             code .attr(name, value);
       .col-xs-12
         .panel.panel-default
@@ -26,7 +26,7 @@
       .col-xs-12
         ui-codemirror#exercise0(ui-codemirror-opts="editorOptions" ng-model="exercises[0]")
     h3 ¿Y si tengo los datos en un CSV / TSV / JSON?
-    p D3.js permite importar archivos de datos directamente usando los métodos 
+    p D3.js permite importar archivos de datos directamente usando los métodos
     .panel.panel-default
       .panel-heading Métodos
       .panel-body
@@ -58,7 +58,7 @@
             .row
               small.col-xs-6.pull-left Fuente: INEGI. Estadísticas de mortalidad. Distrito Federal, 2013
               small.col-xs-6.pull.right.text-right
-                a(href="assets/data/CausasDeMortalidadDF2013.csv") CSV 
+                a(href="assets/data/CausasDeMortalidadDF2013.csv") CSV
                   span.glyphicon.glyphicon-download
       .col-xs-12
         ui-codemirror#code0(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
@@ -68,7 +68,7 @@
             code #chart-bar
           .panel-body
             #chart-bar
-      
+
     hr
     h3 Features
     .row
@@ -103,11 +103,11 @@
       a(href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element") https://developer.mozilla.org/en-US/docs/Web/SVG/Element
     hr
     h3 Ejercicio 2 / Ejemplo 2
-    ul 
+    ul
       li Establece la escala a usar para las distancias de los planetas al Sol.
       li Genera una lista (arreglo) con los nombres de los planetas.
-      li Establece la escala 
-        strong ordinal 
+      li Establece la escala
+        strong ordinal
         | a usar para cada uno de los planetas.
       li Genera circulos de SVG para cada uno de los planetas incluidos en los datos
       li Haz que la distancia (propiedad cx) sea proporcional según la escala
@@ -132,13 +132,13 @@
             .row
               small.col-xs-6.pull-left Fuente: Wikipedia, 2016
               small.col-xs-6.pull.right.text-right
-                a(href="assets/data/planetas.csv") CSV 
+                a(href="assets/data/planetas.csv") CSV
                   span.glyphicon.glyphicon-download
       .col-xs-12
         .panel.panel-default
           .panel-heading
             code #ejercicio2
-          .panel-body#ejercicio2
+          .panel-body.planetas#ejercicio2
       .col-xs-12
         ui-codemirror#exercise1(ui-codemirror-opts="editorOptions" ng-model="exercises[1]")
     hr
@@ -152,7 +152,7 @@
             pre
               table
                 tr
-                  td Grupo automotriz 
+                  td Grupo automotriz
                   td Cantidad
                 tr(ng-repeat="d in dataSvg")
                   td {{d.name + " "}}
@@ -160,7 +160,7 @@
             .row
               small.col-xs-6.pull-left Fuente: Asociación Mexicana de la Industria Automotriz
               small.col-xs-6.pull.right.text-right
-                a(href="assets/data/AutosVendidosFeb2016.csv") CSV 
+                a(href="assets/data/AutosVendidosFeb2016.csv") CSV
                   span.glyphicon.glyphicon-download
       .col-xs-12
         ui-codemirror#code3(ui-codemirror-opts="editorOptions" ng-model="codes[3]")
@@ -170,8 +170,8 @@
             code #chart-svg
           .panel-body
             #chart-svg
-      
+
     hr
-    h4 Más ejemplos en 
+    h4 Más ejemplos en
       a(href="https://github.com/mbostock/d3/wiki/Gallery") https://github.com/mbostock/d3/wiki/Gallery
     hr
