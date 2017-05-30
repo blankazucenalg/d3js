@@ -32,7 +32,7 @@
 
     $scope.exercises = [
     '//d3.selectAll(<-- Todos los div dentro de #ejercicio1 -->).style("background", <-- Color -->);\n// Recuerda el selector del hijo en la n-ésima posición div:nth-child(2)',
-    "var datos = [30,40,50,80,100]; \nd3.select('#ejercicio2').selectAll('div')\n  .data(datos) // Se hace el enlace con los datos\n  // Usar la subselección .enter() \n  //Agregar un nuevo div usando .append('div')"];
+    "var datos = [30,40,50,80,100]; \nd3.selectAll('#ejercicio2 *').remove(); \nd3.select('#ejercicio2').selectAll('div')\n  .data(datos) // Se hace el enlace con los datos\n  // Usar la subselección .enter() \n  //Agregar un nuevo div usando .append('div')"];
     $scope.codes = [
     "// d3.select(selection).attr(name [,value]); \nvar parrafo = d3.select('#example1 p');\n$window.console.log(parrafo);",
 
