@@ -9,13 +9,13 @@ nav.navbar.navbar-static-top.navbar-default
       ul.nav.navbar-nav
         //li(ng-class="{ active: isActive('/')}")
           a(ui-sref='home') Inicio
-        li(ng-class="{ active: isActive('/start')}")
+        li(ui-sref-active="active")
           a(ui-sref='start') Introducción
-        li(ng-class="{ active: isActive('/introduction')}")
+        li(ui-sref-active="active")
           a(ui-sref='introduction') Conociendo D3.js
-        li(ng-class="{ active: isActive('/charts')}")
+        li(ui-sref-active="active")
           a(ui-sref='charts') Graficando datos
-        li(ng-class="{ active: isActive('/dbox')}")
+        //li(ng-class="{ active: isActive('/dbox')}")
           a(ui-sref='dbox') Dbox.js
         //li(ng-class="{ active: isActive('/angular')}")
           a(ui-sref='angular') Integrando con Angular.js
