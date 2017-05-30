@@ -3,10 +3,10 @@
 
   angular
     .module('d3Js')
-    .controller('challengeController', challengeController);
+    .controller('ChallengeController', challengeController);
 
   /** @ngInject */
-  function challengeController($scope, $timeout) {
+  function challengeController($scope, $timeout, d3) {
     var vm = this;
 
     d3.csv("assets/data/AutosRegistradosDF.csv", function(d){
@@ -23,5 +23,5 @@
     '<script src="https://d3js.org/d3.v3.min.js"></script>'
     ];
   }
-  
+
 })();

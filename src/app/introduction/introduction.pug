@@ -2,7 +2,23 @@
   .col-xs-12
     h1 Introducción
     h2 Selectores
-    p D3 soporta selecciones por etiqueta <code>("div")</code>, clase <code>(".class")</code>, identificador <code>("#id")</code>, atributo <code>("[color=red]")</code>, anidación <code>("parent child")</code> así como soporta operaciones <b>AND</b> y <b>OR</b> <code>('.class1.class2') ('.class1, .class2')</code> respectivamente.
+    p
+      | D3 soporta selecciones por etiqueta
+      code ("div")
+      | , clase
+      code (".class")
+      | , identificador
+      code ("#id")
+      | , atributo
+      code ("[color=red]")
+      | , anidación
+      code ("parent child")
+      |  así como soporta operaciones
+      b AND
+      |  y
+      b OR
+      code ('.class1.class2') ('.class1, .class2')
+      |  respectivamente.
     p
       a(href="https://librosweb.es/libro/css/capitulo_2/selectores_basicos.html") https://librosweb.es/libro/css/capitulo_2/selectores_basicos.html
     .col-xs-6
@@ -12,20 +28,20 @@
         .panel-body
           pre &lt;body&gt;
             |  &lt;div id="primero"&gt;
-            |    &lt;p&gt; Lorem ipsum dolor sit amet, &lt;a href="#"&gt; consectetuer adipiscing elit&lt;/a&gt;. Praesent blandit nibh at felis. 
-            |    Sed nec diam in dolor vestibulum aliquet. Duis ullamcorper, nisi non facilisis molestie, &lt;em&gt; lorem sem aliquam nulla 
+            |    &lt;p&gt; Lorem ipsum dolor sit amet, &lt;a href="#"&gt; consectetuer adipiscing elit&lt;/a&gt;. Praesent blandit nibh at felis.
+            |    Sed nec diam in dolor vestibulum aliquet. Duis ullamcorper, nisi non facilisis molestie, &lt;em&gt; lorem sem aliquam nulla
             |    &lt;/em&gt;, id lacinia velit mi vestibulum enim.&lt;/p&gt;
             |  &lt;/div&gt;
-            |   
+            |
             |  &lt;div class="normal"&gt;
-            |    &lt;p&gt; Phasellus eu velit sed lorem sodales egestas. Ut feugiat. &lt;span&gt; &lt;a href="#"&gt; Donec porttitor&lt;/a&gt;, 
-            |    magna eu varius luctus,&lt;/span&gt; metus massa tristique massa, in imperdiet est velit vel magna. Phasellus erat. Duis risus. 
-            |    &lt;a href="#"&gt; Maecenas dictum&lt;/a&gt;, nibh vitae pellentesque auctor, tellus velit consectetuer tellus, tempor pretium 
+            |    &lt;p&gt; Phasellus eu velit sed lorem sodales egestas. Ut feugiat. &lt;span&gt; &lt;a href="#"&gt; Donec porttitor&lt;/a&gt;,
+            |    magna eu varius luctus,&lt;/span&gt; metus massa tristique massa, in imperdiet est velit vel magna. Phasellus erat. Duis risus.
+            |    &lt;a href="#"&gt; Maecenas dictum&lt;/a&gt;, nibh vitae pellentesque auctor, tellus velit consectetuer tellus, tempor pretium
             |    felis tellus at metus.&lt;/p&gt;
             |  &lt;div&gt;
-            |   
+            |
             |  &lt;div class="normal"&gt;
-            |    &lt;p&gt; Nam lacus orci, condimentum ut blandit vehicula, ullamcorper vitae metus. Nunc aliquet turpis non tellus aliquam, 
+            |    &lt;p&gt; Nam lacus orci, condimentum ut blandit vehicula, ullamcorper vitae metus. Nunc aliquet turpis non tellus aliquam,
             |    sollicitudin commodo lacus ullamcorper. Quisque eget nisl elit. Cras.&lt;/p&gt;
             |    &lt;input type="text"/&gt;
             |  &lt;div&gt;
@@ -35,55 +51,55 @@
         .panel-heading
           code Selectores
         .panel-body
-          p Selector de etiqueta: 
+          p Selector de etiqueta:
           p
             code p
-            | 
+            |
             code div
-            | 
-            code h1 
-          p Selector de clase: 
+            |
+            code h1
+          p Selector de clase:
           p
             code .destacado
-            | 
+            |
             code .activo
-          p Selector de identificador: 
+          p Selector de identificador:
           p
             code #unico
-            | 
+            |
             code #principal
-          p Selector descendiente: 
+          p Selector descendiente:
           p
             code p span
-            | 
+            |
             code .normal p
-            | 
-            code div ul li 
-          p Selector multiple (OR): 
+            |
+            code div ul li
+          p Selector multiple (OR):
           p
             code h1, h2, h3
-            | 
+            |
             code .normal, .principal
-            | 
+            |
             code #unico, #principal
-          p Selector AND: 
+          p Selector AND:
           p
             code h1.titulo
-            | 
+            |
             code .normal.principal
-            | 
+            |
             code #unico.normal
-          p Selector de atributo: 
+          p Selector de atributo:
           p
             code [color=red]
-            | 
+            |
             code input[type="text"]
 
           p Selector del hijo en la n-ésima posición
           p
-            code p:nth-child(2) 
+            code p:nth-child(2)
             | Devuelve el segundo párrafo que encuentra
-          p 
+          p
             code div:nth-child(3)
             | Devuelve el tercer div que encuentra
 
@@ -102,7 +118,7 @@
         .panel-heading
           code #Example1
         .panel-body
-          p Párrafo 1 
+          p Párrafo 1
           p Párrafo 2
     .col-xs-12
       ui-codemirror#code1(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
@@ -115,7 +131,7 @@
         .panel-heading
           code #Example2
         .panel-body
-          p Párrafo 1 
+          p Párrafo 1
           p Párrafo 2
     .col-xs-12
       ui-codemirror#code2(ui-codemirror-opts="editorOptions" ng-model="codes[2]")
@@ -148,14 +164,14 @@
         .panel-heading
           code #Example3
         .panel-body
-          p Párrafo 1 
+          p Párrafo 1
           p Párrafo 2
     //.col-xs-6
       #example4.panel.panel-default
         .panel-heading
           code #Example4
         .panel-body
-          p Párrafo 1 
+          p Párrafo 1
           p Párrafo 2
     .col-xs-12
       ui-codemirror#code3(ui-codemirror-opts="editorOptions" ng-model="codes[3]")
@@ -180,7 +196,7 @@
         .panel-heading
           code #Example5 : before
         .panel-body
-          p Párrafo 1 
+          p Párrafo 1
           p Párrafo 2
           p Párrafo A
           p Párrafo B
@@ -191,7 +207,7 @@
         .panel-heading
           code #Example5
         .panel-body
-          p Párrafo 1 
+          p Párrafo 1
           p Párrafo 2
           p Párrafo A
           p Párrafo B

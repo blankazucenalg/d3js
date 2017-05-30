@@ -9,20 +9,20 @@
     .row
       .col-xs-12
         h4 Directive.js
-        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[0]")
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="vm.codes[0]")
     .row
       .col-xs-12
         h4 Markup
-        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="codes[1]")
+        ui-codemirror(ui-codemirror-opts="editorOptions" ng-model="vm.codes[1]")
     .row
       .col-xs-12
         .panel.panel-default
           .panel-heading
-            button.btn.btn-default.pull-right(ng-click="updateData()") Actualizar información
+            button.btn.btn-default.pull-right(ng-click="vm.updateData()") Actualizar información
             h3 Visualización con datos random
           .panel-body
-            chart-directive(data="data")
+            chart-directive(data="vm.data")
 hr
-        
 
-    
+
+
