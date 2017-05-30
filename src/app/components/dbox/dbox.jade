@@ -1,0 +1,60 @@
+.row
+  .col-xs-12
+    h1 Dbox
+    h2 Interactive charts made easy. Using the power of D3.js 
+    p Dbox es una biblioteca que utiliza el poder de D3.js para realizar gráficas dinámicas predefinidas. Pensada para el desarrollo de visualizaciones interactivas, permite crear gráficos generales personalizables sin tener que empezar el trabajo desde cero, incluyendo interesantes funcionalidades.
+    
+    p Aunque las gráficas son prediseñadas, es posible personalizar el estilo y la funcionalidad de sus visualizaciones a través de hojas de estilo y manejar eventos sin perder el control sobre sus datos. Dbox hará que sea más fácil.
+     
+    p Dbox permite generar gráficos desde arreglos existentes, archivos csv, tsv, json e integrarlos  con CartoDB ¡permite obtener directamente los datos con una sola consulta!
+    
+    p Hasta el momento con Dbox puedes generar scatters, histogramas, gráficas de líneas de tiempo, gráficos de áreas, treemaps, y puedes visualizar datos geo-referenciados en un mapa de México, con divisiones políticas por estados o municipios. 
+     
+    p Dbox es una biblioteca open source hecha con amor por (DATA4/Datacivica)
+    p Dependencias: d3.js, d3-tip, d3-queue
+    
+    .row
+      .col-xs-12
+        h3 Scatter
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #scatter
+          #scatter.panel-body
+      .col-xs-12
+        ui-codemirror#exampleScatter(ui-codemirror-opts="editorOptions" ng-model="examples[0]")
+    hr
+    .row
+      .col-xs-12
+        h3 Histograma
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #columns
+          #columns.panel-body
+      .col-xs-12
+        ui-codemirror#exampleColumns(ui-codemirror-opts="editorOptions" ng-model="examples[1]")
+    hr
+    .row
+      .col-xs-12
+        h3 Lineas y círculos
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #linesAndCircles
+          #linesAndCircles.panel-body
+      .col-xs-12
+        ui-codemirror#exampleLinesAndCircles(ui-codemirror-opts="editorOptions" ng-model="examples[2]")
+    hr
+    .row
+      .col-xs-12
+        h3 Mapa de México
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            code #map
+          #map.panel-body
+      .col-xs-12
+        ui-codemirror#exampleMapMexico(ui-codemirror-opts="editorOptions" ng-model="examples[3]")
+    hr
+    
